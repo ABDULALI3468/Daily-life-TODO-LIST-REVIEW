@@ -119,15 +119,14 @@ clearCompletedBtn.addEventListener('click', () => {
   render();
 });
 
-let cordArr = [];
 const getCord = () => {
-  cordArr = [];
+  const cordArr = [];
   const lis = document.querySelectorAll('.card .todoDesc');
   lis.forEach((element) => {
-    const y_cord = element.getBoundingClientRect().y;
+    const yCord = element.getBoundingClientRect().y;
     const obj = {
       text: element.value,
-      cordY: y_cord,
+      cordY: yCord,
     };
     cordArr.push(obj);
   });
@@ -135,4 +134,4 @@ const getCord = () => {
 };
 
 export default render;
-export { cordArr, getCord };
+export { getCord };
